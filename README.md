@@ -10,7 +10,7 @@
 
 ## Usage
 
-Simply run `vagrant up` in the main directory. Vagrant will provision a machine on your AWS account.
+Simply run `vagrant up --provider=aws` in the main directory. Vagrant will provision a machine on your AWS account.
 
 After it's finished, you can get the machine's address by running `vagrant ssh-config | grep HostName`.
 
