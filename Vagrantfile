@@ -1,8 +1,6 @@
 # -*- mode: ruby -*-
 # # vi: set ft=ruby :
 
-require 'vagrant-triggers'
-
 Vagrant.require_version ">= 1.6.0"
 
 protonet_ami_owner = "225955013674"
@@ -76,7 +74,7 @@ Vagrant.configure("2") do |config|
       { 'DeviceName' => '/dev/xvdb', 'Ebs.VolumeSize' => 100, 'Ebs.VolumeType' => 'gp2' },
     ]
     aws.instance_type = 'm4.large'
-    aws.ami = get_latest_ami('soul3', protonet_ami_owner)
+    aws.ami = get_latest_ami('development', protonet_ami_owner)
 		aws.tags = {:Name => 'Protonet SOUL'}
  end
 end
